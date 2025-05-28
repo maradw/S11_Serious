@@ -14,27 +14,12 @@ public class TargetObject : MonoBehaviour
     void ScheduleNextAppearance()
     {
         float delay = Random.Range(1f, 3f);
-        Invoke("ActivateTarget", delay);
-    }
-
-    void ActivateTarget()
-    {
-        transform.position = GetRandomPositionInMesh(spawnArea);
-        gameObject.SetActive(true);
-
-        float activeDuration = Random.Range(minTime, maxTime);
-        Invoke(nameof(DeactivateTarget), activeDuration);
-    }
-
-    void DeactivateTarget()
-    {
-        gameObject.SetActive(false);
-        ScheduleNextAppearance();
+        //Invoke("ActivateTarget", delay);
     }
 
     public void OnHit()
     {
-        CancelInvoke(); // detener desactivación si fue golpeado
+       // CancelInvoke(); // detener desactivación si fue golpeado
         transform.position = GetRandomPositionInMesh(spawnArea);
         ScheduleNextAppearance(); // reprogramar aparición
     }
@@ -55,4 +40,28 @@ public class TargetObject : MonoBehaviour
 
         return pos;
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "bullet")
+        {
+            OnHit();
+            Debug.Log("hit");
+        }
+    }
+
+    void ActivateTarget()
+    {
+        transform.position = GetRandomPositionInMesh(spawnArea);
+        gameObject.SetActive(true);
+
+        float activeDuration = Random.Range(minTime, maxTime);
+        Invoke(nameof(DeactivateTarget), activeDuration);
+    }
+
+    void DeactivateTarget()
+    {
+        gameObject.SetActive(false);
+        ScheduleNextAppearance();
+    }
+
 }

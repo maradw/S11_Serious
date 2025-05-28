@@ -3397,6 +3397,34 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "a",
+            "id": "47a14e51-b672-4f62-a475-a9a9363e860b",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "60188f5f-107b-4481-bb3d-69182c72a902",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a31f1a52-a5fe-4ff8-a333-f3c832215bd7",
+                    "path": "<XRController>/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
