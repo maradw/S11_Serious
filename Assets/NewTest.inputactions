@@ -1,0 +1,45 @@
+{
+    "name": "NewTest",
+    "maps": [
+        {
+            "name": "new",
+            "id": "9773b888-bb79-4047-8d7c-685d546e3dd6",
+            "actions": [
+                {
+                    "name": "OnShoot",
+                    "type": "Button",
+                    "id": "ae266df1-eb06-46e5-b524-83df7ece19a8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "31f04eb8-ce07-442f-b77a-9137673344ea",
+                    "path": "<XRController>/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";rai;lef",
+                    "action": "OnShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "lef",
+            "bindingGroup": "lef",
+            "devices": []
+        },
+        {
+            "name": "rai",
+            "bindingGroup": "rai",
+            "devices": []
+        }
+    ]
+}
