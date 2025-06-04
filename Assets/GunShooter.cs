@@ -20,4 +20,30 @@ public class GunShooter : MonoBehaviour
          rb.linearVelocity = spawnPoint.forward * bulletSpeed;*/
         Debug.Log("waza trigger");
     }
+
+    public void OnHand(InputAction.CallbackContext context)
+    {
+
+        Debug.Log("waza hand");
+    }
+    public void OnMove(InputAction.CallbackContext context)
+    {
+
+        Debug.Log("waza joystick");
+    }
+    public void OnPrimary(InputAction.CallbackContext context)
+    {
+
+        Debug.Log("waza primary");
+    }
+    public void OnSecundary(InputAction.CallbackContext context)
+    {
+
+        Debug.Log("waza secondary");
+    }
+    public void OnMenu(InputAction.CallbackContext context)
+    {
+
+        Debug.Log("waza secondary");
+    }
 }

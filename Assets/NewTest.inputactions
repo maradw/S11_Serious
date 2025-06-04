@@ -2,13 +2,58 @@
     "name": "NewTest",
     "maps": [
         {
-            "name": "new",
+            "name": "Controls",
             "id": "9773b888-bb79-4047-8d7c-685d546e3dd6",
             "actions": [
                 {
-                    "name": "OnShoot",
+                    "name": "IndexTrigger",
                     "type": "Button",
                     "id": "ae266df1-eb06-46e5-b524-83df7ece19a8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HandTrigger",
+                    "type": "Button",
+                    "id": "1c0da77e-15f7-48f3-90b1-c9e5f6e1c7d5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ThumbStick",
+                    "type": "Value",
+                    "id": "7cc9560e-4fb4-4ff3-9aa1-b8943187e292",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "AX",
+                    "type": "Button",
+                    "id": "b6413d4e-6f9e-4a0e-81f6-9fbc53a669be",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BY",
+                    "type": "Button",
+                    "id": "ac58924f-bb65-4e34-9403-f67bfeb4df5b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Menu",
+                    "type": "Button",
+                    "id": "084d9154-c938-435f-8056-31bebc6756e3",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -23,23 +68,106 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";rai;lef",
-                    "action": "OnShoot",
+                    "action": "IndexTrigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3148bbda-a34f-4d51-8ad4-70f712d7d9d0",
+                    "path": "<XRController>/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HandTrigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d86ef062-1b2e-44eb-a2b7-d725459daf86",
+                    "path": "<XRController>/{Primary2DAxis}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThumbStick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1a7bd2e-5bc9-4ebd-93ad-9b21e7505e5d",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThumbStick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a026387-1f16-4cae-87ec-7d50444c457b",
+                    "path": "<XRController>/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AX",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0cc584de-91a2-46aa-8693-b225c4378bfe",
+                    "path": "<XRController>/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BY",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ef7375d-300b-43d5-b074-7cb29cac3c5e",
+                    "path": "<XRController>/{Menu}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Left",
+            "id": "e82abd16-05da-47a3-a17e-7b306b27c0ec",
+            "actions": [
+                {
+                    "name": "ThumbStick",
+                    "type": "Value",
+                    "id": "14a18412-ed75-40a5-a7c6-0a91e5e566bc",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d53cf50e-4c74-4430-9388-d37ab6611aed",
+                    "path": "<XRController>{LeftHand}/{Primary2DAxis}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThumbStick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": [
-        {
-            "name": "lef",
-            "bindingGroup": "lef",
-            "devices": []
-        },
-        {
-            "name": "rai",
-            "bindingGroup": "rai",
-            "devices": []
-        }
-    ]
+    "controlSchemes": []
 }
