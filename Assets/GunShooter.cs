@@ -11,6 +11,9 @@ public class GunShooter : MonoBehaviour
     public float moveSpeed = 2f;
     [SerializeField] GameObject test;
     public Transform vrCamera;
+
+    //LayerMask layerMask = LayerMask.GetMask("floor");
+    int raydistance = 3;
     private void Start()
     {
         Debug.Log("a");
@@ -26,7 +29,7 @@ public class GunShooter : MonoBehaviour
 
         Vector3 relativeDirection = vrCamera.TransformDirection(direction);
     relativeDirection.y = 0; // Evita que se mueva hacia arriba/abajo
-    test.transform.position += relativeDirection * moveSpeed * Time.deltaTime;
+    transform.position += relativeDirection * moveSpeed * Time.deltaTime;
     }
     public void OnShoot(InputAction.CallbackContext context)
     {
@@ -61,5 +64,23 @@ public class GunShooter : MonoBehaviour
     {
 
         Debug.Log("waza secondary");
+    }
+    void FixedUpdate()
+    {
+
+        RaycastHit hit;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, raydistance, 3))
+
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            Debug.Log("Did Hit");
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20, Color.white);
+            Debug.Log("Did not Hit");
+        }
+
     }
 }
