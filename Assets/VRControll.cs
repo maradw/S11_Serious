@@ -76,9 +76,9 @@ public class VRControll : MonoBehaviour
 
     public void OnShoot(InputAction.CallbackContext context)
     {
-        /*GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
+        GameObject bullet = Instantiate(currentObject, spawnPoint.position, spawnPoint.rotation);
          Rigidbody rb = bullet.GetComponent<Rigidbody>();
-         rb.linearVelocity = spawnPoint.forward * bulletSpeed;*/
+         rb.linearVelocity = spawnPoint.forward * bulletSpeed;
         Debug.Log("waza trigger");
     }
 
