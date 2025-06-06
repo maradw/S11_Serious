@@ -10,7 +10,7 @@ public class VRControll : MonoBehaviour
     private Vector2 moveInput;
     public float moveSpeed = 2f;
     //[SerializeField] GameObject test;
-    GameObject currentObject;
+    [SerializeField] GameObject currentObject;
 
     //LayerMask layerMask = LayerMask.GetMask("floor");
     int raydistance = 3;
@@ -79,12 +79,12 @@ public class VRControll : MonoBehaviour
         GameObject bullet = Instantiate(currentObject, spawnPoint.position, spawnPoint.rotation);
          Rigidbody rb = bullet.GetComponent<Rigidbody>();
          rb.linearVelocity = spawnPoint.forward * bulletSpeed;
-        Debug.Log("waza trigger");
+        Debug.Log(" trigger");
     }
 
     public void OnHand(InputAction.CallbackContext context)
     {
-        inHand = !inHand;
+        /*inHand = !inHand;
         if (context.performed && inHand == false)
         {
             currentObject.transform.SetParent(spawnPoint.transform);
@@ -101,9 +101,9 @@ public class VRControll : MonoBehaviour
             {
                 inHand = false;
             }
-        }
+        }*/
 
-            Debug.Log("waza hand");
+        Debug.Log("waza hand");
     }
     public void OnMove(InputAction.CallbackContext context)
     {
