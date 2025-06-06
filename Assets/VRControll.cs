@@ -9,7 +9,7 @@ public class VRControll : MonoBehaviour
     public float bulletSpeed = 20f;
     private Vector2 moveInput;
     public float moveSpeed = 2f;
-    [SerializeField] GameObject test;
+    //[SerializeField] GameObject test;
     GameObject currentObject;
 
     //LayerMask layerMask = LayerMask.GetMask("floor");
@@ -21,7 +21,7 @@ public class VRControll : MonoBehaviour
 
     bool inHand;
 
-    public Transform environment;
+    //public Transform environment;
 
     private void Update()
     {
@@ -97,7 +97,7 @@ public class VRControll : MonoBehaviour
         {
             currentObject.transform.SetParent(null);
             currentObject = null;
-            if (spawnPoint = null)
+            if (spawnPoint == null)
             {
                 inHand = false;
             }
